@@ -36,8 +36,6 @@ const [unstake,setUnstake] =  useState([
     {image:img_01, id:'17'},
     {image:img_01, id:'18'}
 ]);
-  // all routes => 'home', 'stake', 'unstake', 'claim'
-
 
   return (
     <div className="App" >
