@@ -1,6 +1,8 @@
-.container {
+.claim-container {
     padding: 40px 40px;
     min-height: 100vh;
+    background-size: cover;
+    background-color: black;
 }
 
 .body-container {
@@ -70,7 +72,7 @@
     text-align: center;
     
     transition: 0.3s;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 .claim--btn:hover {
@@ -81,8 +83,9 @@
 
 @media only screen and (max-width: 992px) {
     .body-wrapper {
-        height: 500px;
+        height: 600px;
         transition: 0.3s;
+        margin-bottom: 600px;
     }
 
     .value-container {

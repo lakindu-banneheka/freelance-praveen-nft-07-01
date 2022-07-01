@@ -9,7 +9,7 @@ const Claim = ({ setRoute, route }) => {
     }
 
     return (
-        <div className='container' >
+        <div className='claim-container' >
             <div className='header--wrap' > 
                 <Header 
                     setRoute={setRoute}
