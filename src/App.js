@@ -3,7 +3,9 @@ import Home from './Pages/Home/Home';
 import { useState } from 'react';
 import StakingDapp from './Pages/StakingDapp/StakingDapp';
 import Claim from './Pages/Claim/Claim';
-import img_01 from '../../assets/images/img-1.png';
+
+// img
+import img_01 from './assets/images/img-1.png';
 
 
 export const Routes = {
