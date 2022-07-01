@@ -6,7 +6,8 @@ import img_01 from '../../assets/images/img-1.png';
 import { Routes } from '../../App';
 
 
-const StakingDapp = ({ setRoute, route }) => {
+const StakingDapp = ({ setRoute, route, selectedId, setSelectedId }) => {
+
     const [stake,setStake] =  useState([
         {image:img_01, id:'1'},
         {image:img_01, id:'3'},
@@ -26,14 +27,7 @@ const StakingDapp = ({ setRoute, route }) => {
         {image:img_01, id:'18'}
     ]);
     const [cards,setCards] = useState([
-        {image:img_01, id:'1'},
-        {image:img_01, id:'2'},
-        {image:img_01, id:'3'},
-        {image:img_01, id:'4'},
-        {image:img_01, id:'5'},
-        {image:img_01, id:'6'},
-        {image:img_01, id:'7'},
-        {image:img_01, id:'8'},    
+        {image:'', id:'0'},  
     ]);
 
     useEffect(() => {
@@ -57,7 +51,12 @@ const StakingDapp = ({ setRoute, route }) => {
                 { cards.map((card,i) => { 
                     return(
                         <div className='grid-item' key={i} >
-                            <CardComponent image={card.image} id={card.id} />
+                            <CardComponent 
+                                image={card.image} 
+                                id={card.id} 
+                                selectedId={selectedId}
+                                setSelectedId={setSelectedId}
+                            />
                         </div>
                     );
                 })}

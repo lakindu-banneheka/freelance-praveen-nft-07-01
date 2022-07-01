@@ -14,6 +14,8 @@ export const Routes = {
 
 function App() {
   const [route, setRoute] = useState(Routes.HOME);
+  const [stakeId,setStakeId] = useState(null);
+  const [unstakeId,setUnstakeId] = useState(null);
 
   // all routes => 'home', 'stake', 'unstake', 'claim'
 
@@ -29,11 +31,15 @@ function App() {
           ?<StakingDapp 
             setRoute={setRoute}
             route={route}
+            selectedId={stakeId}
+            setSelectedId={setStakeId}
           />
           :(route === Routes.UNSTAKE
             ?<StakingDapp 
               setRoute={setRoute}
               route={route}
+              selectedId={unstakeId}
+              setSelectedId={setUnstakeId}
             />
             :(route === Routes.CLAIM
               ?<Claim 
