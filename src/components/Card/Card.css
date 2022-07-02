@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 400px;
     min-width: 320px;
-    height: 350px;
+    height: fit-content;
     background: rgba(48, 52, 57, 0.9);
     border-radius: 43px;
     overflow: hidden;
@@ -12,20 +12,37 @@
     transition: 0.3s;
     cursor: pointer;
     position: relative;
+    padding: 30px 10px;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+  transition: 0.3s;
+}
+
+
 .image {
-    width: 100%;
+    width: 320px;
     height: auto;
     /* transform: rotate(19deg); */
     transition: 0.3s;
-    padding-bottom: 60px;
-    padding-right: 25px;
+    padding: 0px;
 }
 
+.card-btn-wrapper {
+  transition: 0.3s;
+}
+
+.card-btn {
+  background-color: #2181F2;
+}
 
 .card-wrapper:hover {
     box-shadow: 0px 0px 15px #fff;
+    transition: 0.3s;
 }
 
 

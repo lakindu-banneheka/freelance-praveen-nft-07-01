@@ -28,16 +28,25 @@ function App() {
     // {image:img_01, id:'6'},
     // {image:img_01, id:'7'},
     // {image:img_01, id:'8'}
-]);
-const [unstake,setUnstake] =  useState([
-    {image:img_01, id:'12'},
-    {image:img_01, id:'13'},
-    {image:img_01, id:'14'},
-    {image:img_01, id:'15'},
-    {image:img_01, id:'16'},
-    {image:img_01, id:'17'},
-    {image:img_01, id:'18'}
-]);
+  ]);
+  const [unstake,setUnstake] =  useState([
+      {image:img_01, id:'12'},
+      {image:img_01, id:'13'},
+      {image:img_01, id:'14'},
+      {image:img_01, id:'15'},
+      {image:img_01, id:'16'},
+      {image:img_01, id:'17'},
+      {image:img_01, id:'18'}
+  ]);
+
+  const onClickStakeBtn = () => {
+    console.log(stakeId, 'stake');
+  };
+
+  const onClickUnstakeBtn = () => {
+    console.log(unstakeId, 'unstake');
+  };
+
 
   return (
     <div className="App" >
@@ -52,6 +61,7 @@ const [unstake,setUnstake] =  useState([
             route={route}
             selectedId={stakeId}
             setSelectedId={setStakeId}
+            onClickCardBtn={onClickStakeBtn}
             data={stake}
           />
           :(route === Routes.UNSTAKE
@@ -61,6 +71,7 @@ const [unstake,setUnstake] =  useState([
               selectedId={unstakeId}
               setSelectedId={setUnstakeId}
               data={unstake}
+              onClickCardBtn={onClickUnstakeBtn}
             />
             :(route === Routes.CLAIM
               ?<Claim 

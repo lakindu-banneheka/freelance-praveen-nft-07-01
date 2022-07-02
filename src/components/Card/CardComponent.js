@@ -1,9 +1,10 @@
 import React from 'react';
 import './Card.css';
 import { IoCheckmarkCircle } from "react-icons/io5";
+import { Routes } from '../../App';
 
 
-const CardComponent = ({image, id, selectedId, setSelectedId}) => {
+const CardComponent = ({image, id, selectedId, setSelectedId, onClickCardBtn, route}) => {
 
     const onClickCard = () => {
         console.log('onclick card', id)
@@ -13,7 +14,22 @@ const CardComponent = ({image, id, selectedId, setSelectedId}) => {
     return (
         <div className='card-wrapper' onClick={onClickCard} >
             {/* <div className='img' /> */}
-            <img src={image} alt='img' className='image' />
+            <div className='card-body' >
+                <img src={image} alt='img' className='image' />
+                <>
+                    { selectedId 
+                        ? ( selectedId === id
+                            ?<div className="card-btn-wrapper" >
+                                <button onClick={onClickCardBtn} className='card-btn btn' >
+                                    { route === Routes.STAKE ? `STAKE` : `UNSTAKE` }
+                                </button>
+                            </div>
+                            : <></>
+                        ) : <></>
+                    }
+                </>
+            </div>
+            
             { selectedId ? ( selectedId === id
                         ?<div className="select-container">
                             <span className="selected-icon-container">

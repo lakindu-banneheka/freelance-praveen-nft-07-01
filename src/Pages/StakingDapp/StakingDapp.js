@@ -4,7 +4,7 @@ import Header from '../../components/Header/Header';
 import './StakingDapp.css';
 
 
-const StakingDapp = ({ setRoute, route, selectedId, setSelectedId, data }) => {
+const StakingDapp = ({ setRoute, route, selectedId, setSelectedId, data, onClickCardBtn }) => {
 
     const [cards,setCards] = useState([
         {image:'', id:'0'},  
@@ -31,6 +31,8 @@ const StakingDapp = ({ setRoute, route, selectedId, setSelectedId, data }) => {
                                 id={card.id} 
                                 selectedId={selectedId}
                                 setSelectedId={setSelectedId}
+                                onClickCardBtn={onClickCardBtn}
+                                route={route}
                             />
                         </div>
                     );
