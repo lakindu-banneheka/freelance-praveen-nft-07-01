@@ -22,12 +22,12 @@ function App() {
   const [unstakeId,setUnstakeId] = useState(null);
   const [stake,setStake] =  useState([
     {image:img_01, id:'1'},
-    {image:img_01, id:'3'},
-    {image:img_01, id:'4'},
-    {image:img_01, id:'5'},
-    {image:img_01, id:'6'},
-    {image:img_01, id:'7'},
-    {image:img_01, id:'8'}
+    // {image:img_01, id:'3'},
+    // {image:img_01, id:'4'},
+    // {image:img_01, id:'5'},
+    // {image:img_01, id:'6'},
+    // {image:img_01, id:'7'},
+    // {image:img_01, id:'8'}
 ]);
 const [unstake,setUnstake] =  useState([
     {image:img_01, id:'12'},
