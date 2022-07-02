@@ -18,12 +18,14 @@ export const Routes = {
 
 function App() {
   const [route, setRoute] = useState(Routes.HOME);
+
+  const [claimValue, setClaimValue] = useState(10000);
   const [stakeId,setStakeId] = useState(null);
   const [unstakeId,setUnstakeId] = useState(null);
   const [stake,setStake] =  useState([
     {image:img_01, id:'1'},
-    // {image:img_01, id:'3'},
-    // {image:img_01, id:'4'},
+    {image:img_01, id:'3'},
+    {image:img_01, id:'4'},
     // {image:img_01, id:'5'},
     // {image:img_01, id:'6'},
     // {image:img_01, id:'7'},
@@ -47,6 +49,9 @@ function App() {
     console.log(unstakeId, 'unstake');
   };
 
+  const onClcikClaim = () => {
+    console.log('on click claim')
+  };
 
   return (
     <div className="App" >
@@ -77,6 +82,8 @@ function App() {
               ?<Claim 
                 setRoute={setRoute}
                 route={route}
+                onClcikClaim={onClcikClaim}
+                claimValue={claimValue}
               />
               :(<></>)
             )

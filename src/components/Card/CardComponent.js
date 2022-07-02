@@ -7,7 +7,6 @@ import { Routes } from '../../App';
 const CardComponent = ({image, id, selectedId, setSelectedId, onClickCardBtn, route}) => {
 
     const onClickCard = () => {
-        console.log('onclick card', id)
         setSelectedId(id);
     }
 

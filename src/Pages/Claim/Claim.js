@@ -2,12 +2,7 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import './Claim.css';
 
-const Claim = ({ setRoute, route }) => {
-
-    const onClickBtn = () => {
-        console.log('onClick claim')
-    }
-
+const Claim = ({ setRoute, route, claimValue, onClcikClaim }) => {
     return (
         <div className='claim-container' >
             <div className='header--wrap' > 
@@ -21,14 +16,14 @@ const Claim = ({ setRoute, route }) => {
                 <div className='body-wrapper' >
                     <div className='value-container' >
                         <div className='number-wrapper' >
-                            {10000}
+                            {claimValue}
                         </div>
                         <div className='rnm-wrapper' >
                             RNM
                         </div>
                     </div>
                     <div className='btn-wrapper' >
-                        <button className='claim--btn' onClick={onClickBtn} >
+                        <button className='claim--btn' onClick={onClcikClaim} >
                             CLAIM
                         </button>
                     </div>
